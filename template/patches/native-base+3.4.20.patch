@@ -1,0 +1,13 @@
+diff --git a/node_modules/native-base/src/core/color-mode/hooks.tsx b/node_modules/native-base/src/core/color-mode/hooks.tsx
+index c3d0c05..3c8255c 100644
+--- a/node_modules/native-base/src/core/color-mode/hooks.tsx
++++ b/node_modules/native-base/src/core/color-mode/hooks.tsx
+@@ -66,7 +66,7 @@ export const useColorScheme = () => {
+   const appState = useAppState();
+ 
+   useEffect(() => {
+-    if (appState === 'active') {
++    if (appState === 'active' || appState === "background") {
+       setCurrentScheme(colorScheme);
+     }
+   }, [appState, colorScheme]);
