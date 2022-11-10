@@ -4,5 +4,11 @@
   "description": "Base App React Native Template",
   "repository": "git@bitbucket.org:silverlogic/baseapp-reactnative.git",
   "author": "David bermudez <db@tsl.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2"
+  }
 }
