@@ -43,6 +43,8 @@ buck-out/
 \.buckd/
 *.keystore
 !debug.keystore
+.expo/*
+.expo-shared/*
 
 # fastlane
 #

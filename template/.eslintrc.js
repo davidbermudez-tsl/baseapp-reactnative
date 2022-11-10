@@ -2,12 +2,13 @@ module.exports = {
   root: true,
   extends: '@react-native-community',
   parser: '@typescript-eslint/parser',
-  plugins: ['@typescript-eslint', 'unused-imports'],
+  plugins: ['unused-imports', '@typescript-eslint'],
   overrides: [
     {
-      files: ['*.ts', '*.tsx'],
+      files: ['*.js', '*.ts', '*.tsx'],
       rules: {
-        'no-unused-vars': 'off', // or "@typescript-eslint/no-unused-vars": "off",
+        '@typescript-eslint/no-unused-vars': 'off',
+        'no-unused-vars': 'off',
         'unused-imports/no-unused-imports': 'error',
         '@typescript-eslint/no-shadow': ['off'],
         'no-shadow': 'off',

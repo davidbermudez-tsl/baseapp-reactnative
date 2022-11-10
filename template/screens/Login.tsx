@@ -54,7 +54,12 @@ const Login = () => {
           </FormControl.ErrorMessage>
         </FormControl>
         <FormControl flex={1} flexDirection={'row'}>
-          <Button onPress={() => handleSubmit()} isLoading={isSubmitting} alignSelf="flex-end" flex={1}>
+          <Button
+            onPress={() => handleSubmit()}
+            isLoading={isSubmitting}
+            alignSelf="flex-end"
+            flex={1}
+          >
             Login
           </Button>
         </FormControl>
