@@ -6,41 +6,19 @@ import {useAppDispatch} from '../../../redux/hooks'
 import AuthSlice from '../redux/slice'
 import {useEffect, useState} from 'react'
 
-interface LoginRequest {
-  email: string
-  password: string
-}
-
-interface LoginResponse {
-  token?: string
-  phoneNumber?: string
-}
-
-interface Me {
-  id: number
-  email: string
-  firstName: string
-  lastName: string
-  isEmailVerified: boolean
-  isNewEmailConfirmed: boolean
-  newEmail?: string
-  referralCode: string
-  phoneNumber?: string
-}
-
 export const useLoginMutation = (formik: FormikProps<any>) => {
   const queryClient = useQueryClient()
   const me = useCurrentUser()
 
   return useMutation(
-    async (data: LoginRequest) => {
+    async (data: ILoginRequest) => {
       formik.setSubmitting(true)
       await AsyncStorage.removeItem('token')
-      return await axios.post<LoginResponse>('/login', data)
+      return await axios.post<ILoginResponse>('/login', data)
     },
     {
       onError: (err: any) => {
-        formik.setErrors(err.response.data)
+        formik.setErrors(err.response.data || {})
         formik.setSubmitting(false)
       },
       onSuccess: async (response) => {
@@ -75,7 +53,7 @@ export const useCurrentUser = () => {
   }, [])
 
   const dispatch = useAppDispatch()
-  const query = useQuery('/users/me', () => axios.get<Me>('/users/me').then((r) => r.data), {
+  const query = useQuery('/users/me', () => axios.get<IMe>('/users/me').then((r) => r.data), {
     staleTime: Infinity, // makes cache never expire automatically
     enabled: Boolean(token),
     useErrorBoundary: false,

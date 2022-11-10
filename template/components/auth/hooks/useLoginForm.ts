@@ -1,4 +1,4 @@
-import {useLoginMutation} from './../query/login'
+import {useLoginMutation} from '../query/auth'
 import {useFormik} from 'formik'
 import * as Yup from 'yup'
 

@@ -12,10 +12,9 @@ function* login(action: PayloadAction) {
   }
 }
 
-function* logout(action: PayloadAction) {
-  const {payload} = action
+function* logout() {
   try {
-    yield putResolve(Slice.actions.logoutSuccess(payload))
+    yield putResolve(Slice.actions.logoutSuccess())
   } catch (error) {
     yield put(Slice.actions.requestFailure({error}))
   }
