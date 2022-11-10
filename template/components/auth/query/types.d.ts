@@ -1,4 +1,14 @@
-export interface IUser {
+interface ILoginRequest {
+  email: string
+  password: string
+}
+
+interface ILoginResponse {
+  token?: string
+  phoneNumber?: string
+}
+
+interface IMe {
   id: number
   email: string
   firstName: string
@@ -7,29 +17,5 @@ export interface IUser {
   isNewEmailConfirmed: boolean
   newEmail?: string
   referralCode: string
-}
-
-export interface IUserResult {
-  user: IUser | null
-  isLoading: boolean
-  isSuccess: boolean
-  isIdle: boolean
-  status: string
-}
-
-export interface ILogin {
-  formik: FormikProps<any>
-  mutation: UseMutationResult<unknown, unknown, void, unknown>
-}
-
-export interface IUserContext {
-  user: IUser | null
-  isLoading: boolean
-  isSuccess: boolean
-  isIdle: boolean
-  status: string
-  setUser: Function
-  refetchUser:
-    | ((options?: {throwOnError?: boolean; cancelRefetch?: boolean}) => Promise<UseQueryResult>)
-    | Function
+  phoneNumber?: string
 }

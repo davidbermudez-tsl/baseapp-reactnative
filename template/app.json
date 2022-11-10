@@ -1,17 +1,5 @@
 {
   "name": "BaseAppReactNative",
   "displayName": "BaseAppReactNative",
-  "expo": {
-    "extra": {
-      "eas": {
-        "projectId": "ae900adc-cacb-43e8-bb56-2ebb30e9ca5f"
-      }
-    },
-    "runtimeVersion": "1.0.0",
-    "android": {},
-    "ios": {},
-    "updates": {
-      "url": "https://u.expo.dev/ae900adc-cacb-43e8-bb56-2ebb30e9ca5f"
-    }
-  }
+  "expo": {}
 }

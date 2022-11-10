@@ -49,3 +49,20 @@ npx react-native run-android
 Any downloaded fonts have to be moved to the `assets/fonts` directory, then run `npx react-native-asset` to link them.
 
 Once the fonts are linked, change the mapping in `theme/fonts` to match the fonts loaded.
+
+### _Splash Screen_
+
+React Native Splash Screen has been installed and configured to work out of the box.
+
+#### Android
+
+Replace the file `android/app/src/main/res/drawable/launch_screen.png` with your Splash Screen.
+
+#### iOS
+
+Splash Screen has to be added using xcode [https://blog.logrocket.com/splash-screen-react-native/]
+
+# Enable EAS Updates
+
+EAS and Expo are used to enable expo updates and update the code by running `yarn setup-eas-updates`.
+If everything worked, you should be able to publish updates OTA that don't require native compilation by running `eas update` command

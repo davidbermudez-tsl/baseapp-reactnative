@@ -1,5 +1,5 @@
 import {useAppSelector} from './redux/hooks'
-import {useCurrentUser} from './components/auth/query/login'
+import {useCurrentUser} from './components/auth/query/auth'
 import SplashScreen from './layouts/SplashScreen'
 import Router from './Router'
 import {navigationRef} from './navigation/RootNavigation'
