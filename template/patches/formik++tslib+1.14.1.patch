@@ -1,0 +1,12 @@
+diff --git a/node_modules/formik/node_modules/tslib/package.json b/node_modules/formik/node_modules/tslib/package.json
+index f8c2a53..6a5bb1a 100644
+--- a/node_modules/formik/node_modules/tslib/package.json
++++ b/node_modules/formik/node_modules/tslib/package.json
+@@ -32,6 +32,6 @@
+             "import": "./modules/index.js",
+             "default": "./tslib.js"
+         },
+-        "./": "./"
++        "./*": "./*"
+     }
+ }
