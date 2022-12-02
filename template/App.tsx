@@ -5,11 +5,13 @@ import Router from './Router'
 import {navigationRef} from './navigation/RootNavigation'
 import {StatusBar, useColorMode, useTheme} from 'native-base'
 import {DarkTheme, DefaultTheme, NavigationContainer} from '@react-navigation/native'
+import {useFlipper} from '@react-navigation/devtools'
 
 const App = () => {
   const {colorMode} = useColorMode()
   const {colors} = useTheme()
   const {appLoaded} = useAppSelector(({auth}) => ({...auth}))
+  useFlipper(navigationRef)
   useCurrentUser()
 
   const NavigationDarkTheme = {

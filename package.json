@@ -2,7 +2,7 @@
   "name": "baseapp-reactnative-template",
   "version": "0.0.1",
   "description": "Base App React Native Template",
-  "repository": "git@bitbucket.org:silverlogic/baseapp-reactnative.git",
+  "repository": "git@github.com:davidbermudez-tsl/baseapp-reactnative.git",
   "author": "David bermudez <db@tsl.io>",
   "license": "MIT",
   "scripts": {

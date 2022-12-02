@@ -17,19 +17,19 @@ jobs:
             apt-get -y install yarn
       - restore_cache:
           keys:
-            - v3-deps-{{ checksum "template/yarn.lock" }}
+            - v3-deps-{{ checksum "yarn.lock" }}
       - run:
           name: Install dependencies
           command: |
-            cd template && yarn install --ignore-scripts && yarn postinstall
+            yarn install --dev --network-concurrency 1
       - save_cache:
-          key: v3-deps-{{ checksum "template/yarn.lock" }}
+          key: v3-deps-{{ checksum "yarn.lock" }}
           paths:
             - ~/.cache
       - run:
           name: Run Tests
           command: |
-            cd template && yarn test
+            yarn test
 
 workflows:
   version: 2

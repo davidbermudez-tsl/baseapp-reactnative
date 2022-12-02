@@ -66,3 +66,8 @@ Splash Screen has to be added using xcode [https://blog.logrocket.com/splash-scr
 
 EAS and Expo are used to enable expo updates and update the code by running `yarn setup-eas-updates`.
 If everything worked, you should be able to publish updates OTA that don't require native compilation by running `eas update` command
+
+# Install Flipper(Optional Debugger)
+
+Flipper devtools is currently installed in the current App, all you need is the Flipper desktop app to debug:
+Install instructions here: https://fbflipper.com/docs/getting-started/
